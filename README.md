@@ -4,7 +4,7 @@ A modern, responsive website built for a frontend development hackathon competit
 
 ## 🚀 Live Demo
 
-**[View Live Website](https://vercel.com/patil-pratiks-projects/v0-frontend-hackathon-website)**
+**[View Live Website](https://v0-frontend-hackathon-website.vercel.app/)**
 
 ## 📋 Project Overview
 
