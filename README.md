@@ -55,6 +55,341 @@ This website was created to meet the mandatory requirements for a frontend hacka
 - **Icons**: Lucide React
 - **Deployment**: Vercel
 
+## 🚀 Complete Setup Guide
+
+### Prerequisites
+
+Before you begin, ensure you have the following installed on your system:
+
+#### 1. **Node.js** (Required)
+- **Version**: 18.0.0 or higher
+- **Download**: [https://nodejs.org/](https://nodejs.org/)
+- **Verify Installation**:
+  \`\`\`bash
+  node --version
+  npm --version
+  \`\`\`
+
+#### 2. **Git** (Required)
+- **Download**: [https://git-scm.com/](https://git-scm.com/)
+- **Verify Installation**:
+  \`\`\`bash
+  git --version
+  \`\`\`
+
+#### 3. **Code Editor** (Recommended)
+- **VS Code**: [https://code.visualstudio.com/](https://code.visualstudio.com/)
+- **Recommended Extensions**:
+  - ES7+ React/Redux/React-Native snippets
+  - Tailwind CSS IntelliSense
+  - TypeScript Importer
+  - Prettier - Code formatter
+
+### Installation Methods
+
+#### Method 1: Clone from GitHub (Recommended)
+
+1. **Clone the repository**
+   \`\`\`bash
+   git clone https://github.com/PatilPratik16/Vibe-coding-Hackathon-round-1.git
+   \`\`\`
+
+2. **Navigate to project directory**
+   \`\`\`bash
+   cd Vibe-coding-Hackathon-round-1
+   \`\`\`
+
+3. **Install dependencies**
+   \`\`\`bash
+   npm install
+   \`\`\`
+   
+   *Or if you prefer yarn:*
+   \`\`\`bash
+   yarn install
+   \`\`\`
+
+4. **Start development server**
+   \`\`\`bash
+   npm run dev
+   \`\`\`
+   
+   *Or with yarn:*
+   \`\`\`bash
+   yarn dev
+   \`\`\`
+
+5. **Open in browser**
+   - Navigate to [http://localhost:3000](http://localhost:3000)
+   - The website should load with all features working
+
+#### Method 2: Download ZIP
+
+1. **Download the project**
+   - Go to [GitHub Repository](https://github.com/PatilPratik16/Vibe-coding-Hackathon-round-1)
+   - Click "Code" → "Download ZIP"
+   - Extract the ZIP file to your desired location
+
+2. **Open terminal/command prompt**
+   - Navigate to the extracted folder
+   \`\`\`bash
+   cd path/to/extracted/folder
+   \`\`\`
+
+3. **Install dependencies**
+   \`\`\`bash
+   npm install
+   \`\`\`
+
+4. **Start development server**
+   \`\`\`bash
+   npm run dev
+   \`\`\`
+
+#### Method 3: Fork and Clone (For Contributors)
+
+1. **Fork the repository**
+   - Go to [GitHub Repository](https://github.com/PatilPratik16/Vibe-coding-Hackathon-round-1)
+   - Click "Fork" button in the top right
+
+2. **Clone your fork**
+   \`\`\`bash
+   git clone https://github.com/YOUR_USERNAME/Vibe-coding-Hackathon-round-1.git
+   \`\`\`
+
+3. **Add upstream remote**
+   \`\`\`bash
+   cd Vibe-coding-Hackathon-round-1
+   git remote add upstream https://github.com/PatilPratik16/Vibe-coding-Hackathon-round-1.git
+   \`\`\`
+
+4. **Install and run**
+   \`\`\`bash
+   npm install
+   npm run dev
+   \`\`\`
+
+### Platform-Specific Setup
+
+#### Windows Users
+
+1. **Install Node.js**
+   - Download from [nodejs.org](https://nodejs.org/)
+   - Run the installer (.msi file)
+   - Restart your computer
+
+2. **Install Git**
+   - Download from [git-scm.com](https://git-scm.com/)
+   - Use Git Bash for terminal commands
+
+3. **Recommended Terminal**
+   - Use **Git Bash** or **Windows Terminal**
+   - Avoid Command Prompt for better compatibility
+
+#### macOS Users
+
+1. **Install Node.js**
+   \`\`\`bash
+   # Using Homebrew (recommended)
+   brew install node
+   
+   # Or download from nodejs.org
+   \`\`\`
+
+2. **Install Git**
+   \`\`\`bash
+   # Using Homebrew
+   brew install git
+   
+   # Or use Xcode Command Line Tools
+   xcode-select --install
+   \`\`\`
+
+#### Linux Users (Ubuntu/Debian)
+
+1. **Install Node.js**
+   \`\`\`bash
+   # Update package index
+   sudo apt update
+   
+   # Install Node.js
+   sudo apt install nodejs npm
+   
+   # Or install latest version via NodeSource
+   curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+   sudo apt-get install -y nodejs
+   \`\`\`
+
+2. **Install Git**
+   \`\`\`bash
+   sudo apt install git
+   \`\`\`
+
+### Environment Setup
+
+#### 1. **Create Environment File** (Optional)
+\`\`\`bash
+# Create .env.local file in root directory
+touch .env.local
+\`\`\`
+
+Add any environment variables if needed:
+\`\`\`env
+# .env.local
+NEXT_PUBLIC_SITE_URL=http://localhost:3000
+\`\`\`
+
+#### 2. **Configure VS Code** (Optional)
+Create `.vscode/settings.json`:
+\`\`\`json
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "typescript.preferences.importModuleSpecifier": "relative"
+}
+\`\`\`
+
+### Available Scripts
+
+\`\`\`bash
+# Development server
+npm run dev          # Start development server on localhost:3000
+
+# Production build
+npm run build        # Create optimized production build
+npm run start        # Start production server
+
+# Code quality
+npm run lint         # Run ESLint for code quality checks
+npm run type-check   # Run TypeScript type checking
+
+# Deployment
+npm run export       # Export static files (if needed)
+\`\`\`
+
+### Troubleshooting
+
+#### Common Issues and Solutions
+
+1. **Port 3000 already in use**
+   \`\`\`bash
+   # Kill process on port 3000
+   npx kill-port 3000
+   
+   # Or run on different port
+   npm run dev -- -p 3001
+   \`\`\`
+
+2. **Node modules issues**
+   \`\`\`bash
+   # Clear npm cache
+   npm cache clean --force
+   
+   # Delete node_modules and reinstall
+   rm -rf node_modules package-lock.json
+   npm install
+   \`\`\`
+
+3. **Permission errors (macOS/Linux)**
+   \`\`\`bash
+   # Fix npm permissions
+   sudo chown -R $(whoami) ~/.npm
+   \`\`\`
+
+4. **Git clone issues**
+   \`\`\`bash
+   # If HTTPS doesn't work, try SSH
+   git clone git@github.com:PatilPratik16/Vibe-coding-Hackathon-round-1.git
+   \`\`\`
+
+#### Performance Optimization
+
+1. **Enable faster builds**
+   \`\`\`bash
+   # Add to package.json scripts
+   "dev:turbo": "next dev --turbo"
+   \`\`\`
+
+2. **Clear Next.js cache**
+   \`\`\`bash
+   rm -rf .next
+   npm run dev
+   \`\`\`
+
+### Deployment Options
+
+#### 1. **Vercel** (Recommended)
+\`\`\`bash
+# Install Vercel CLI
+npm i -g vercel
+
+# Deploy
+vercel
+
+# Or connect GitHub repo to Vercel dashboard
+\`\`\`
+
+#### 2. **Netlify**
+\`\`\`bash
+# Install Netlify CLI
+npm install -g netlify-cli
+
+# Build and deploy
+npm run build
+netlify deploy --prod --dir=out
+\`\`\`
+
+#### 3. **GitHub Pages**
+\`\`\`bash
+# Add to package.json
+"homepage": "https://yourusername.github.io/repository-name",
+"scripts": {
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d out"
+}
+
+# Install gh-pages
+npm install --save-dev gh-pages
+
+# Deploy
+npm run deploy
+\`\`\`
+
+### Development Workflow
+
+1. **Start development**
+   \`\`\`bash
+   npm run dev
+   \`\`\`
+
+2. **Make changes**
+   - Edit files in your preferred code editor
+   - Changes will auto-reload in browser
+
+3. **Test responsiveness**
+   - Use browser dev tools
+   - Test on different screen sizes
+   - Verify dark/light mode toggle
+
+4. **Build for production**
+   \`\`\`bash
+   npm run build
+   npm run start
+   \`\`\`
+
+### Getting Help
+
+If you encounter any issues:
+
+1. **Check the console** for error messages
+2. **Verify all prerequisites** are installed correctly
+3. **Clear cache and reinstall** dependencies
+4. **Check GitHub Issues** for similar problems
+5. **Contact developer** (details below)
+
 ## 📁 Project Structure
 
 \`\`\`
@@ -99,44 +434,6 @@ This website was created to meet the mandatory requirements for a frontend hacka
 - **Scroll Animations**: GSAP-powered reveal animations
 - **Micro-interactions**: Hover effects and button animations
 - **Loading States**: Smooth progress indicators
-
-## 🚀 Getting Started
-
-### Prerequisites
-- Node.js 18+ 
-- npm or yarn package manager
-
-### Installation
-
-1. **Clone the repository**
-   \`\`\`bash
-   git clone https://github.com/PatilPratik16/Vibe-coding-Hackathon-round-1.git
-   cd Vibe-coding-Hackathon-round-1
-   \`\`\`
-
-2. **Install dependencies**
-   \`\`\`bash
-   npm install
-   # or
-   yarn install
-   \`\`\`
-
-3. **Run the development server**
-   \`\`\`bash
-   npm run dev
-   # or
-   yarn dev
-   \`\`\`
-
-4. **Open your browser**
-   Navigate to [http://localhost:3000](http://localhost:3000)
-
-### Build for Production
-
-\`\`\`bash
-npm run build
-npm start
-\`\`\`
 
 ## 📱 Responsive Breakpoints
 
