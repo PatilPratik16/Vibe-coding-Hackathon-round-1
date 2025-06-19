@@ -5,10 +5,10 @@ import { Github, Twitter, Linkedin, Mail, Heart } from "lucide-react"
 
 export default function Footer() {
   const socialLinks = [
-    { icon: Github, href: "https://github.com/PatilPratik16/Vibe-coding-Hackathon-round-1", label: "GitHub" },
-    { icon: Twitter, href: "https://x.com/Pratikp29494227", label: "Twitter" },
-    { icon: Linkedin, href: "https://www.linkedin.com/in/pratik-patil-187413223/", label: "LinkedIn" },
-    { icon: Mail, href: "pratikpatil886652@gmail.com", label: "Email" },
+    { icon: Github, href: "#", label: "GitHub" },
+    { icon: Twitter, href: "#", label: "Twitter" },
+    { icon: Linkedin, href: "#", label: "LinkedIn" },
+    { icon: Mail, href: "#", label: "Email" },
   ]
 
   const quickLinks = [
@@ -38,7 +38,7 @@ export default function Footer() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="text-2xl font-bold text-primary mb-4">HackFest 2024</h3>
+            <h3 className="text-2xl font-bold text-primary mb-4">HackFest 2025</h3>
             <p className="text-muted-foreground mb-6 max-w-md">
               The premier frontend development hackathon bringing together passionate developers to create innovative
               web experiences.
