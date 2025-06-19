@@ -5,9 +5,9 @@ import { Github, Twitter, Linkedin, Mail, Heart } from "lucide-react"
 
 export default function Footer() {
   const socialLinks = [
-    { icon: Github, href: "#", label: "GitHub" },
-    { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
+    { icon: Github, href: "https://github.com/PatilPratik16/Vibe-coding-Hackathon-round-1", label: "GitHub" },
+    { icon: Twitter, href: "https://x.com/Pratikp29494227", label: "Twitter" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/pratik-patil-187413223/", label: "LinkedIn" },
     { icon: Mail, href: "#", label: "Email" },
   ]
 
